@@ -1,0 +1,200 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Library.BikeApplication</name>
+    </assembly>
+    <members>
+        <member name="T:Library.BikeApplication.BikeRepository">
+            <summary>
+            Implementation of the JSON persistence for the Bike repository.
+            </summary>
+        </member>
+        <member name="M:Library.BikeApplication.BikeRepository.SaveBikesToFile(System.Collections.Generic.List{Library.BikeApplication.Model.Bike})">
+            <summary>
+            Saves the bike into JSON file.
+            </summary>
+            <param name="bikeList">The list of  bikes to be saved.</param>
+        </member>
+        <member name="M:Library.BikeApplication.BikeRepository.LoadBikesFromFile">
+            <summary>
+            Method to retrieve all Bikes from the file.
+            </summary>
+            <returns> A List of Bikes from file JSON or empty list.</returns>
+        </member>
+        <member name="M:Library.BikeApplication.BikeRepository.GetNextId(System.Collections.Generic.List{Library.BikeApplication.Model.Bike})">
+            <summary>
+            Generates an ID for the new bike.
+            </summary>
+            <param name="bikes">The list of existing bikes.</param>
+            <returns>The generated int ID.</returns>
+        </member>
+        <member name="M:Library.BikeApplication.BikeRepository.CreateDirectory(System.String)">
+            <summary>
+            Create  a Directory if it doesnt Exist.
+            </summary>
+            <param name="directoryPath">The path where this directory should be created.</param>
+        </member>
+        <member name="M:Library.BikeApplication.BikeRepository.CreateFile(System.String)">
+            <summary>
+            Create  a File if it doesnt Exist.
+            </summary>
+            <param name="filePath">The path where this file should be created.</param>
+        </member>
+        <member name="T:Library.BikeApplication.BikeService">
+            <summary>
+            Service class for managing bike operations.
+            </summary>
+        </member>
+        <member name="M:Library.BikeApplication.BikeService.GetBikes">
+            <summary>
+            Gets all Bikes in alphabetic order by Model.
+            </summary>
+            <returns>A list of bikes and a successful result in case they exist ,
+            or an error message if they doesn't exist.</returns>
+        </member>
+        <member name="M:Library.BikeApplication.BikeService.GetBikeById(System.Int32)">
+             <summary>
+            The service that gets one Bike by id.
+             </summary>
+             <param name="id"></param>
+             <returns>A bike and a successful result in case it exists ,
+             or an error message if it doesn't exist.</returns>
+        </member>
+        <member name="M:Library.BikeApplication.BikeService.DeleteBikeById(System.Int32)">
+            <summary>
+            The service to delete a bike by id.
+            </summary>
+            <param name="id">The id of the bike to be deleted.</param>
+            /// <returns>A successful result in case it exists and it was deleted ,
+            or an error message if it doesn't exist.</returns>
+        </member>
+        <member name="M:Library.BikeApplication.BikeService.AddBike(Library.BikeApplication.Model.Bike)">
+            <summary>
+            Service to add a new Bike.
+            </summary>
+            <param name="newBike">The new Bike to be added.</param>
+            <returns>A successful result in case it was created,
+            or an error message if it couldn't be created.</returns>
+        </member>
+        <member name="M:Library.BikeApplication.BikeService.EditBikeById(System.Int32,Library.BikeApplication.Model.Bike)">
+            <summary>
+            The Service to edit an existing Bike.
+            </summary>
+            <param name="id"></param>
+            <param name="editedBike"></param>
+            <returns>A successful result in case it exists and it was edited ,
+            or an error message if it doesn't exist.</returns>
+        </member>
+        <member name="M:Library.BikeApplication.Interface.IBikeRepository.SaveBikesToFile(System.Collections.Generic.List{Library.BikeApplication.Model.Bike})">
+            <summary>
+            Saves the list of bikes to the file.
+            </summary>
+            <param name="bikes">The list of bikes to save.</param>
+        </member>
+        <member name="M:Library.BikeApplication.Interface.IBikeRepository.LoadBikesFromFile">
+            <summary>
+            Loads the list of bikes from the file.
+            </summary>
+            <returns>The list of bikes loaded from the file.</returns>
+        </member>
+        <member name="M:Library.BikeApplication.Interface.IBikeRepository.GetNextId(System.Collections.Generic.List{Library.BikeApplication.Model.Bike})">
+            <summary>
+            Generates an ID for the new bike.
+            </summary>
+            <param name="bikes">The list of existing bikes.</param>
+            <returns>The generated int ID.</returns>
+        </member>
+        <member name="M:Library.BikeApplication.Interface.IBikeRepository.CreateDirectory(System.String)">
+            <summary>
+            Create  a Directory if it doesnt Exist.
+            </summary>
+            <param name="directoryPath">The path where this directory should be created.</param>
+        </member>
+        <member name="M:Library.BikeApplication.Interface.IBikeRepository.CreateFile(System.String)">
+            <summary>
+            Create  a File if it doesnt Exist.
+            </summary>
+            <param name="filePath">The path where this file should be created.</param>
+        </member>
+        <member name="M:Library.BikeApplication.Interface.IBikeService.GetBikes">
+            <summary>
+            Function to get all Bikes
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Library.BikeApplication.Interface.IBikeService.GetBikeById(System.Int32)">
+            <summary>
+            Function to get a Bike
+            </summary>
+            <returns>
+            Bikes
+            </returns>
+        </member>
+        <member name="M:Library.BikeApplication.Interface.IBikeService.AddBike(Library.BikeApplication.Model.Bike)">
+            <summary>
+            Adds in the File the new Bike
+            </summary>
+            <param name="bikes"></param>
+            <param name="bike"></param>
+        </member>
+        <member name="M:Library.BikeApplication.Interface.IBikeService.DeleteBikeById(System.Int32)">
+            <summary>
+            Deletes one Bike by Id.
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Library.BikeApplication.Interface.IBikeService.EditBikeById(System.Int32,Library.BikeApplication.Model.Bike)">
+            <summary>
+            Edites one Bike by Id.
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Library.BikeApplication.Model.Bike.Id">
+            <summary>
+            Gets or sets the Id of the Bike.
+            </summary>
+        </member>
+        <member name="P:Library.BikeApplication.Model.Bike.Make">
+            <summary>
+            Gets or sets the Make of the Bike.
+            </summary>
+        </member>
+        <member name="P:Library.BikeApplication.Model.Bike.Model">
+            <summary>
+            Gets or sets the Model of the Bike.
+            </summary>
+        </member>
+        <member name="P:Library.BikeApplication.Model.Bike.Color">
+            <summary>
+            Gets or sets the Color of the Bike.
+            </summary>
+        </member>
+        <member name="P:Library.BikeApplication.Model.Bike.Type">
+            <summary>
+            Gets or sets the Type of the Bike.
+            </summary>
+        </member>
+        <member name="P:Library.BikeApplication.Model.Bike.Size">
+            <summary>
+            Gets or sets the Size of the Bike.
+            </summary>
+        </member>
+        <member name="P:Library.BikeApplication.Result`1.ErrorMessage">
+            <summary>
+            Gets or sets ErrorMessage of the Result
+            </summary>
+        </member>
+        <member name="P:Library.BikeApplication.Result`1.Success">
+            <summary>
+             Gets or sets the Success of the Result.
+            </summary>
+        </member>
+        <member name="P:Library.BikeApplication.Result`1.Data">
+            <summary>
+            Gets or sets the Data of the Result.
+            </summary>
+        </member>
+    </members>
+</doc>

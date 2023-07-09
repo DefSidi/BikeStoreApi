@@ -1,0 +1,66 @@
+[
+  {
+    "Id": 1,
+    "Make": "Lectric Xp 3.0",
+    "Model": "Lectric eBikes",
+    "Color": "Yellow",
+    "Type": "City",
+    "Size": "Small"
+  },
+  {
+    "Id": 2,
+    "Make": "Trek",
+    "Model": "Trek Domane SL 6",
+    "Color": "Black",
+    "Type": "Road",
+    "Size": "Medium"
+  },
+  {
+    "Id": 3,
+    "Make": "Giant",
+    "Model": "Giant Talon 3",
+    "Color": "Red",
+    "Type": "Mountain",
+    "Size": "Large"
+  },
+  {
+    "Id": 4,
+    "Make": "Specialized",
+    "Model": "Specialized Sirrus",
+    "Color": "Blue",
+    "Type": "Hybrid",
+    "Size": "Medium"
+  },
+  {
+    "Id": 5,
+    "Make": "Cannondale",
+    "Model": "Cannondale Synapse",
+    "Color": "Black",
+    "Type": "Road",
+    "Size": "Medium"
+  },
+  {
+    "Id": 6,
+    "Make": "Scott",
+    "Model": "Scott Spark 900",
+    "Color": "Green",
+    "Type": "Mountain",
+    "Size": "Large"
+  },
+  {
+    "Id": 8,
+    "Make": "Bianchi",
+    "Model": "Bianchi Oltre XR4",
+    "Color": "Celeste",
+    "Type": "Road",
+    "Size": "Medium"
+  },
+  {
+    "Id": 9,
+    "Make": "Fuji",
+    "Model": "Fuji Jari 1.1",
+    "Color": "Orange",
+    "Type": "Gravel",
+    "Size": "Medium"
+  }
+]
